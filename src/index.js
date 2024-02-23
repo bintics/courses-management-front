@@ -1,28 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { 
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom';
-import ErrorPage from './pages/error-page';
-import ClassRoomReservationPage from './pages/classroom-reservation-page';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: '/classroom-reservations',
-        element: <ClassRoomReservationPage />
-      }
-    ]
-  }  
-]);
+import { RouterProvider } from 'react-router-dom';
+import router from './router';
+import './lang/lang';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

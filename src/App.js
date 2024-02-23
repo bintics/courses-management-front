@@ -7,15 +7,18 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Nav } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t } = useTranslation('translation', { keyPrefix: 'nav' });
+
   return (
     <Container fluid className='App2'>
       <Row>
         <Col md="2">
           <Nav defaultActiveKey="/home" className="flex-column">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href='/classroom-reservations' eventKey="link-1">Reservación de aulas</Nav.Link>
+            <Nav.Link href="/">{ t('homeLink') }</Nav.Link>
+            <Nav.Link href='/classroom-reservations' eventKey="link-1">{ t('classRoomReservationsLink') }</Nav.Link>
           </Nav>
         </Col>
         <Col md="10" style={{ backgroundColor: 'white'}}>
