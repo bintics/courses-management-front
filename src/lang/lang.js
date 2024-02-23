@@ -13,7 +13,7 @@ i18n
       en: en,
       es: es
     },
-    lng: "en", // if you're using a language detector, do not define the lng option
+    lng: "es", // if you're using a language detector, do not define the lng option
     fallbackLng: "en",
 
     interpolation: {
