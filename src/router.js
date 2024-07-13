@@ -7,6 +7,7 @@ import HomePage from './pages/home/home-page';
 import ClassRoomReservationPage from './pages/classroom-reservation/home';
 import { Col, Container, Nav, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import ClientsPage from './pages/clients/home';
 
 function AppRouter() {
 
@@ -20,12 +21,14 @@ function AppRouter() {
           <Nav defaultActiveKey="/home" className="flex-column">
             <Nav.Link href="/">{ t('homeLink') }</Nav.Link>
             <Nav.Link href='/classroom-reservations' eventKey="link-1">{ t('classRoomReservationsLink') }</Nav.Link>
+            <Nav.Link href='/clients' eventKey="link-2">{ t('clientsLink') }</Nav.Link>
           </Nav>
         </Col>
         <Col md="10" style={{ backgroundColor: 'white'}}>
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/classroom-reservations' element={<ClassRoomReservationPage/>} />
+          <Route path='/clients' element={ <ClientsPage /> } />
         </Routes>
         </Col>
       </Row>

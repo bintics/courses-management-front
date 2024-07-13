@@ -12,9 +12,23 @@ const en = {
                 }
             }
         },
+        clients: {
+            title: 'Clients',
+            home: {
+                description: 'List clients',
+                table: {
+                    name: 'Name',
+                    surname: 'Surname',
+                    secondSurname: 'Second Surname',
+                    createdAt: 'Createt at',
+                    updatedAt: 'Updated at',
+                }
+            }
+        },
         nav: {
             homeLink: 'Home',
-            classRoomReservationsLink: 'Classroom reservations'
+            classRoomReservationsLink: 'Classroom reservations',
+            clientsLink: 'Clients'
         }
     }
 };
